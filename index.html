@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Manipur Hub — discover local food, shops, services and places." />
+  <title>Manipur Hub | Discover Local</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Manipur Hub home"><span>✦</span> Manipur Hub</a>
+    <button class="menu-button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#discover">Discover</a><a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">LOKTAK TO KANG LA</p>
+        <h1>Discover the heart of <em>Manipur.</em></h1>
+        <p class="hero-text">Your friendly guide to memorable food, trusted local businesses, helpful services, and beautiful places.</p>
+        <form class="search-box" id="searchForm" role="search">
+          <label class="sr-only" for="searchInput">Search Manipur Hub</label>
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Try “cafe”, “repair”, or “lake”" autocomplete="off" />
+          <button type="submit">Search</button>
+        </form>
+        <p class="search-note" id="resultCount" aria-live="polite">Explore hand-picked local favourites</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="lake"></div><div class="boat">⌒</div><span class="bird bird-one">⌁</span><span class="bird bird-two">⌁</span>
+        <p>Loktak Lake</p>
+      </div>
+    </section>
+
+    <section class="section categories" id="discover">
+      <div class="section-heading"><div><p class="eyebrow">EXPLORE BY INTEREST</p><h2>What are you looking for?</h2></div></div>
+      <div class="category-grid" role="tablist" aria-label="Listing categories">
+        <button class="category active" data-category="all" role="tab" aria-selected="true"><span>✨</span><strong>All picks</strong><small>Something for everyone</small></button>
+        <button class="category" data-category="Food" role="tab" aria-selected="false"><span>🍲</span><strong>Food</strong><small>Local flavours & cafés</small></button>
+        <button class="category" data-category="Shops" role="tab" aria-selected="false"><span>🛍️</span><strong>Shops</strong><small>Find a special something</small></button>
+        <button class="category" data-category="Services" role="tab" aria-selected="false"><span>🛠️</span><strong>Services</strong><small>Reliable local help</small></button>
+        <button class="category" data-category="Places" role="tab" aria-selected="false"><span>🌿</span><strong>Places</strong><small>Worth the journey</small></button>
+      </div>
+    </section>
+
+    <section class="section listings" aria-labelledby="listing-title">
+      <div class="section-heading listing-heading"><div><p class="eyebrow" id="listing-label">LOCAL FAVOURITES</p><h2 id="listing-title">Made for a good day out</h2></div><button class="text-button" id="showAll">Show all <span>→</span></button></div>
+      <div class="card-grid" id="cardGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>Nothing matched that search. Try another word or choose a category.</p>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-mark">❋</div>
+      <div><p class="eyebrow">MADE FOR OUR COMMUNITY</p><h2>Small discoveries, closer to home.</h2></div>
+      <p>Manipur Hub is a simple local directory. Listings here are sample entries so you can customise this website with your own favourite businesses and places.</p>
+      <a class="outline-button" href="mailto:hello@example.com?subject=Add%20my%20listing">Add your listing <span>→</span></a>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span>✦</span> Manipur Hub</a><p>Discover local. Support local. © <span id="year"></span></p><a href="mailto:hello@example.com">Contact us ↗</a></footer>
+
+  <dialog id="detailsModal" aria-labelledby="modalTitle">
+    <button class="close-button" id="closeModal" aria-label="Close details">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
