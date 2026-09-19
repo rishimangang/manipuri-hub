@@ -1,10 +1,10 @@
 
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
-const SUPABASE_KEY = "YOUR_SUPABASE_ANON_KEY";
+const SUPABASE_URL = "https://rfkhfjobpetgtxfrairn.supabase.co";
+const SUPABASE_KEY = "sb_publishable_6WbwRCBbqkpVMwqlJjeVZg_3XH0YcVC";
 
 const db = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
+ https://rfkhfjobpetgtxfrairn.supabase.co ,
+  sb_publishable_6WbwRCBbqkpVMwqlJjeVZg_3XH0YcVC
 );
 
 const loginSection = document.getElementById("loginSection");
