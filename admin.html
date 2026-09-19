@@ -1,1 +1,83 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Manipur Hub Admin</title>
+
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <main class="admin-container">
+
+    <h1>Manipur Hub Admin Login</h1>
+
+    <section id="loginSection">
+      <input
+        type="email"
+        id="adminEmail"
+        placeholder="Admin Email"
+        required
+      >
+
+      <input
+        type="password"
+        id="adminPassword"
+        placeholder="Password"
+        required
+      >
+
+      <button id="loginButton">
+        Login
+      </button>
+
+      <p id="loginMessage"></p>
+    </section>
+
+    <section id="dashboardSection" hidden>
+
+      <h2>Admin Dashboard</h2>
+
+      <button id="logoutButton">
+        Logout
+      </button>
+
+      <hr>
+
+      <h2>Business Management</h2>
+
+      <select id="businessFilter">
+        <option value="all">All</option>
+        <option value="pending">Pending</option>
+        <option value="approved">Approved</option>
+        <option value="rejected">Rejected</option>
+      </select>
+
+      <div id="businessList"></div>
+
+      <hr>
+
+      <h2>Photo Review</h2>
+
+      <button id="loadPhotosButton">
+        Load Pending Photos
+      </button>
+
+      <p id="photoReviewMessage"></p>
+
+      <div id="photoReviewList"></div>
+
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+
+</body>
+</html>
+
